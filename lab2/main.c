@@ -81,6 +81,7 @@ void *bitonic_sort(void *arg) {
 
     return NULL;
 }
+
 // total threads = 2^(max_depth + 1) - 1
 // 2^(max_depth + 1) - 1 <= num_threads
 int compute_max_depth(int num_threads) {
