@@ -1,5 +1,5 @@
 float E(int x) {
-    float result = 1.0;
+    float result = 0;
     float factorial = 1.0;
 
     for (int n = 0; n <= x; ++n) {
