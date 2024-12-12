@@ -1,0 +1,339 @@
+79888 execve("./controller", ["./controller"], 0x7ffe5203d038 /* 36 vars */) = 0
+79888 brk(NULL)                         = 0x5608d237f000
+79888 arch_prctl(0x3001 /* ARCH_??? */, 0x7ffcdafbf120) = -1 EINVAL (Invalid argument)
+79888 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2c19538000
+79888 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+79888 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+79888 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=17119, ...}, AT_EMPTY_PATH) = 0
+79888 mmap(NULL, 17119, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f2c19533000
+79888 close(3)                          = 0
+79888 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/librabbitmq.so.4", O_RDONLY|O_CLOEXEC) = 3
+79888 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+79888 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=92232, ...}, AT_EMPTY_PATH) = 0
+79888 mmap(NULL, 94360, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2c1951b000
+79888 mmap(0x7f2c1951f000, 53248, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f2c1951f000
+79888 mmap(0x7f2c1952c000, 20480, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x11000) = 0x7f2c1952c000
+79888 mmap(0x7f2c19531000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15000) = 0x7f2c19531000
+79888 close(3)                          = 0
+79888 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+79888 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+79888 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+79888 pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+79888 pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0I\17\357\204\3$\f\221\2039x\324\224\323\236S"..., 68, 896) = 68
+79888 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+79888 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+79888 mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2c192f2000
+79888 mprotect(0x7f2c1931a000, 2023424, PROT_NONE) = 0
+79888 mmap(0x7f2c1931a000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f2c1931a000
+79888 mmap(0x7f2c194af000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f2c194af000
+79888 mmap(0x7f2c19508000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7f2c19508000
+79888 mmap(0x7f2c1950e000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f2c1950e000
+79888 close(3)                          = 0
+79888 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libssl.so.3", O_RDONLY|O_CLOEXEC) = 3
+79888 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+79888 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=667864, ...}, AT_EMPTY_PATH) = 0
+79888 mmap(NULL, 669680, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2c1924e000
+79888 mmap(0x7f2c1926c000, 372736, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e000) = 0x7f2c1926c000
+79888 mmap(0x7f2c192c7000, 118784, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x79000) = 0x7f2c192c7000
+79888 mmap(0x7f2c192e4000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x95000) = 0x7f2c192e4000
+79888 close(3)                          = 0
+79888 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcrypto.so.3", O_RDONLY|O_CLOEXEC) = 3
+79888 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+79888 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=4455728, ...}, AT_EMPTY_PATH) = 0
+79888 mmap(NULL, 4469952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2c18e0a000
+79888 mmap(0x7f2c18ebc000, 2486272, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb2000) = 0x7f2c18ebc000
+79888 mmap(0x7f2c1911b000, 860160, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x311000) = 0x7f2c1911b000
+79888 mmap(0x7f2c191ed000, 385024, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3e2000) = 0x7f2c191ed000
+79888 mmap(0x7f2c1924b000, 9408, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f2c1924b000
+79888 close(3)                          = 0
+79888 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2c18e08000
+79888 arch_prctl(ARCH_SET_FS, 0x7f2c18e08b80) = 0
+79888 set_tid_address(0x7f2c18e08e50)   = 79888
+79888 set_robust_list(0x7f2c18e08e60, 24) = 0
+79888 rseq(0x7f2c18e09520, 0x20, 0, 0x53053053) = 0
+79888 mprotect(0x7f2c19508000, 16384, PROT_READ) = 0
+79888 mprotect(0x7f2c191ed000, 372736, PROT_READ) = 0
+79888 mprotect(0x7f2c192e4000, 40960, PROT_READ) = 0
+79888 mprotect(0x7f2c19531000, 4096, PROT_READ) = 0
+79888 mprotect(0x5608cb69f000, 4096, PROT_READ) = 0
+79888 mprotect(0x7f2c19572000, 8192, PROT_READ) = 0
+79888 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+79888 munmap(0x7f2c19533000, 17119)     = 0
+79888 getrandom("\x0d\xa1\x33\x90\xf5\x1c\xad\xb3", 8, GRND_NONBLOCK) = 8
+79888 brk(NULL)                         = 0x5608d237f000
+79888 brk(0x5608d23a0000)               = 0x5608d23a0000
+79888 mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2c18de7000
+79888 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+79888 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+79888 close(3)                          = 0
+79888 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+79888 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+79888 close(3)                          = 0
+79888 newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=510, ...}, 0) = 0
+79888 newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+79888 openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+79888 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=510, ...}, AT_EMPTY_PATH) = 0
+79888 read(3, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 510
+79888 read(3, "", 4096)                 = 0
+79888 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=510, ...}, AT_EMPTY_PATH) = 0
+79888 close(3)                          = 0
+79888 newfstatat(AT_FDCWD, "/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=200, ...}, 0) = 0
+79888 openat(AT_FDCWD, "/etc/host.conf", O_RDONLY|O_CLOEXEC) = 3
+79888 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=92, ...}, AT_EMPTY_PATH) = 0
+79888 read(3, "# The \"order\" line is only used "..., 4096) = 92
+79888 read(3, "", 4096)                 = 0
+79888 close(3)                          = 0
+79888 futex(0x7f2c1951532c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+79888 openat(AT_FDCWD, "/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 3
+79888 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=200, ...}, AT_EMPTY_PATH) = 0
+79888 read(3, "# This file was automatically ge"..., 4096) = 200
+79888 read(3, "", 4096)                 = 0
+79888 uname({sysname="Linux", nodename="finleyl", ...}) = 0
+79888 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=200, ...}, AT_EMPTY_PATH) = 0
+79888 close(3)                          = 0
+79888 openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 3
+79888 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=400, ...}, AT_EMPTY_PATH) = 0
+79888 lseek(3, 0, SEEK_SET)             = 0
+79888 read(3, "# This file was automatically ge"..., 4096) = 400
+79888 read(3, "", 4096)                 = 0
+79888 close(3)                          = 0
+79888 socket(AF_INET, SOCK_STREAM, IPPROTO_TCP) = 3
+79888 fcntl(3, F_GETFD)                 = 0
+79888 fcntl(3, F_SETFD, FD_CLOEXEC)     = 0
+79888 fcntl(3, F_GETFL)                 = 0x2 (flags O_RDWR)
+79888 fcntl(3, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+79888 setsockopt(3, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+79888 setsockopt(3, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+79888 connect(3, {sa_family=AF_INET, sin_port=htons(5672), sin_addr=inet_addr("127.0.0.1")}, 16) = -1 EINPROGRESS (Operation now in progress)
+79888 poll([{fd=3, events=POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+79888 getsockopt(3, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+79888 sendto(3, "AMQP\0\0\t\1", 8, MSG_NOSIGNAL, NULL, 0) = 8
+79888 recvfrom(3, 0x7f2c18de7010, 131072, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+79888 poll([{fd=3, events=POLLIN}], 1, 11999) = 1 ([{fd=3, revents=POLLIN}])
+79888 recvfrom(3, "\1\0\0\0\0\1\366\0\n\0\n\0\t\0\0\1\321\fcapabilitiesF\0"..., 131072, 0, NULL, NULL) = 510
+79888 brk(0x5608d23c2000)               = 0x5608d23c2000
+79888 sendto(3, "\1\0\0\0\0\1@\0\n\0\v\0\0\1\34\7productS\0\0\0\nrabb"..., 328, MSG_NOSIGNAL, NULL, 0) = 328
+79888 recvfrom(3, 0x7f2c18de7010, 131072, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+79888 poll([{fd=3, events=POLLIN}], 1, 11998) = 1 ([{fd=3, revents=POLLIN}])
+79888 recvfrom(3, "\1\0\0\0\0\0\f\0\n\0\36\7\377\0\2\0\0\0<\316", 131072, 0, NULL, NULL) = 20
+79888 sendto(3, "\1\0\0\0\0\0\f\0\n\0\37\7\377\0\2\0\0\0\0\316", 20, MSG_NOSIGNAL, NULL, 0) = 20
+79888 sendto(3, "\1\0\0\0\0\0\10\0\n\0(\1/\0\1\316", 16, MSG_NOSIGNAL, NULL, 0) = 16
+79888 recvfrom(3, 0x7f2c18de7010, 131072, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+79888 poll([{fd=3, events=POLLIN}], 1, 11997) = 1 ([{fd=3, revents=POLLIN}])
+79888 recvfrom(3, "\1\0\0\0\0\0\5\0\n\0)\0\316", 131072, 0, NULL, NULL) = 13
+79888 sendto(3, "\1\0\1\0\0\0\5\0\24\0\n\0\316", 13, MSG_NOSIGNAL, NULL, 0) = 13
+79888 recvfrom(3, 0x7f2c18de7010, 131072, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+79888 poll([{fd=3, events=POLLIN}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+79888 recvfrom(3, "\1\0\1\0\0\0\10\0\24\0\v\0\0\0\0\316", 131072, 0, NULL, NULL) = 16
+79888 mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2c18dc6000
+79888 sendto(3, "\1\0\1\0\0\0\33\0002\0\n\0\0\17controller_resp\0\0\0"..., 35, MSG_NOSIGNAL, NULL, 0) = 35
+79888 recvfrom(3, 0x7f2c18de7010, 131072, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+79888 poll([{fd=3, events=POLLIN}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+79888 recvfrom(3, "\1\0\1\0\0\0\34\0002\0\v\17controller_resp\0\0\0\0\0"..., 131072, 0, NULL, NULL) = 36
+79888 newfstatat(0, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x5), ...}, AT_EMPTY_PATH) = 0
+79888 read(0, "create 1\n", 1024)       = 9
+79888 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f2c18e08e50) = 79908
+79908 set_robust_list(0x7f2c18e08e60, 24 <unfinished ...>
+79888 wait4(79908,  <unfinished ...>
+79908 <... set_robust_list resumed>)    = 0
+79888 <... wait4 resumed>NULL, WNOHANG, NULL) = 0
+79888 newfstatat(1, "",  <unfinished ...>
+79908 execve("./node", ["node", "1", "node_1"], 0x7ffcdafbf2f8 /* 36 vars */ <unfinished ...>
+79888 <... newfstatat resumed>{st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x5), ...}, AT_EMPTY_PATH) = 0
+79888 write(1, "Ok: 79908\n", 10)       = 10
+79908 <... execve resumed>)             = 0
+79888 read(0,  <unfinished ...>
+79908 brk(NULL)                         = 0x55584fc70000
+79908 arch_prctl(0x3001 /* ARCH_??? */, 0x7fff219f39e0) = -1 EINVAL (Invalid argument)
+79908 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe83432a000
+79908 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+79908 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+79908 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=17119, ...}, AT_EMPTY_PATH) = 0
+79908 mmap(NULL, 17119, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fe834325000
+79908 close(3)                          = 0
+79908 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/librabbitmq.so.4", O_RDONLY|O_CLOEXEC) = 3
+79908 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+79908 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=92232, ...}, AT_EMPTY_PATH) = 0
+79908 mmap(NULL, 94360, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fe83430d000
+79908 mmap(0x7fe834311000, 53248, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7fe834311000
+79908 mmap(0x7fe83431e000, 20480, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x11000) = 0x7fe83431e000
+79908 mmap(0x7fe834323000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15000) = 0x7fe834323000
+79908 close(3)                          = 0
+79908 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+79908 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+79908 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+79908 pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+79908 pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0I\17\357\204\3$\f\221\2039x\324\224\323\236S"..., 68, 896) = 68
+79908 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+79908 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+79908 mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fe8340e4000
+79908 mprotect(0x7fe83410c000, 2023424, PROT_NONE) = 0
+79908 mmap(0x7fe83410c000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7fe83410c000
+79908 mmap(0x7fe8342a1000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7fe8342a1000
+79908 mmap(0x7fe8342fa000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7fe8342fa000
+79908 mmap(0x7fe834300000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fe834300000
+79908 close(3)                          = 0
+79908 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libssl.so.3", O_RDONLY|O_CLOEXEC) = 3
+79908 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+79908 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=667864, ...}, AT_EMPTY_PATH) = 0
+79908 mmap(NULL, 669680, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fe834040000
+79908 mmap(0x7fe83405e000, 372736, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e000) = 0x7fe83405e000
+79908 mmap(0x7fe8340b9000, 118784, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x79000) = 0x7fe8340b9000
+79908 mmap(0x7fe8340d6000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x95000) = 0x7fe8340d6000
+79908 close(3)                          = 0
+79908 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcrypto.so.3", O_RDONLY|O_CLOEXEC) = 3
+79908 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+79908 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=4455728, ...}, AT_EMPTY_PATH) = 0
+79908 mmap(NULL, 4469952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fe833bfc000
+79908 mmap(0x7fe833cae000, 2486272, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb2000) = 0x7fe833cae000
+79908 mmap(0x7fe833f0d000, 860160, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x311000) = 0x7fe833f0d000
+79908 mmap(0x7fe833fdf000, 385024, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3e2000) = 0x7fe833fdf000
+79908 mmap(0x7fe83403d000, 9408, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fe83403d000
+79908 close(3)                          = 0
+79908 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe833bfa000
+79908 arch_prctl(ARCH_SET_FS, 0x7fe833bfab80) = 0
+79908 set_tid_address(0x7fe833bfae50)   = 79908
+79908 set_robust_list(0x7fe833bfae60, 24) = 0
+79908 rseq(0x7fe833bfb520, 0x20, 0, 0x53053053) = 0
+79908 mprotect(0x7fe8342fa000, 16384, PROT_READ) = 0
+79908 mprotect(0x7fe833fdf000, 372736, PROT_READ) = 0
+79908 mprotect(0x7fe8340d6000, 40960, PROT_READ) = 0
+79908 mprotect(0x7fe834323000, 4096, PROT_READ) = 0
+79908 mprotect(0x555834f82000, 4096, PROT_READ) = 0
+79908 mprotect(0x7fe834364000, 8192, PROT_READ) = 0
+79908 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+79908 munmap(0x7fe834325000, 17119)     = 0
+79908 getrandom("\x48\x0d\x8d\x05\xf5\x23\x57\x57", 8, GRND_NONBLOCK) = 8
+79908 brk(NULL)                         = 0x55584fc70000
+79908 brk(0x55584fc91000)               = 0x55584fc91000
+79908 mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe833bd9000
+79908 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+79908 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+79908 close(3)                          = 0
+79908 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+79908 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+79908 close(3)                          = 0
+79908 newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=510, ...}, 0) = 0
+79908 newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+79908 openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+79908 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=510, ...}, AT_EMPTY_PATH) = 0
+79908 read(3, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 510
+79908 read(3, "", 4096)                 = 0
+79908 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=510, ...}, AT_EMPTY_PATH) = 0
+79908 close(3)                          = 0
+79908 newfstatat(AT_FDCWD, "/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=200, ...}, 0) = 0
+79908 openat(AT_FDCWD, "/etc/host.conf", O_RDONLY|O_CLOEXEC) = 3
+79908 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=92, ...}, AT_EMPTY_PATH) = 0
+79908 read(3, "# The \"order\" line is only used "..., 4096) = 92
+79908 read(3, "", 4096)                 = 0
+79908 close(3)                          = 0
+79908 futex(0x7fe83430732c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+79908 openat(AT_FDCWD, "/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 3
+79908 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=200, ...}, AT_EMPTY_PATH) = 0
+79908 read(3, "# This file was automatically ge"..., 4096) = 200
+79908 read(3, "", 4096)                 = 0
+79908 uname({sysname="Linux", nodename="finleyl", ...}) = 0
+79908 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=200, ...}, AT_EMPTY_PATH) = 0
+79908 close(3)                          = 0
+79908 openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 3
+79908 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=400, ...}, AT_EMPTY_PATH) = 0
+79908 lseek(3, 0, SEEK_SET)             = 0
+79908 read(3, "# This file was automatically ge"..., 4096) = 400
+79908 read(3, "", 4096)                 = 0
+79908 close(3)                          = 0
+79908 socket(AF_INET, SOCK_STREAM, IPPROTO_TCP) = 3
+79908 fcntl(3, F_GETFD)                 = 0
+79908 fcntl(3, F_SETFD, FD_CLOEXEC)     = 0
+79908 fcntl(3, F_GETFL)                 = 0x2 (flags O_RDWR)
+79908 fcntl(3, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+79908 setsockopt(3, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+79908 setsockopt(3, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+79908 connect(3, {sa_family=AF_INET, sin_port=htons(5672), sin_addr=inet_addr("127.0.0.1")}, 16) = -1 EINPROGRESS (Operation now in progress)
+79908 poll([{fd=3, events=POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+79908 getsockopt(3, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+79908 sendto(3, "AMQP\0\0\t\1", 8, MSG_NOSIGNAL, NULL, 0) = 8
+79908 recvfrom(3, 0x7fe833bd9010, 131072, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+79908 poll([{fd=3, events=POLLIN}], 1, 11999) = 1 ([{fd=3, revents=POLLIN}])
+79908 recvfrom(3, "\1\0\0\0\0\1\366\0\n\0\n\0\t\0\0\1\321\fcapabilitiesF\0"..., 131072, 0, NULL, NULL) = 510
+79908 brk(0x55584fcb3000)               = 0x55584fcb3000
+79908 sendto(3, "\1\0\0\0\0\1@\0\n\0\v\0\0\1\34\7productS\0\0\0\nrabb"..., 328, MSG_NOSIGNAL, NULL, 0) = 328
+79908 recvfrom(3, "\1\0\0\0\0\0\f\0\n\0\36\7\377\0\2\0\0\0<\316", 131072, 0, NULL, NULL) = 20
+79908 sendto(3, "\1\0\0\0\0\0\f\0\n\0\37\7\377\0\2\0\0\0\0\316", 20, MSG_NOSIGNAL, NULL, 0) = 20
+79908 sendto(3, "\1\0\0\0\0\0\10\0\n\0(\1/\0\1\316", 16, MSG_NOSIGNAL, NULL, 0) = 16
+79908 recvfrom(3, "\1\0\0\0\0\0\5\0\n\0)\0\316", 131072, 0, NULL, NULL) = 13
+79908 sendto(3, "\1\0\1\0\0\0\5\0\24\0\n\0\316", 13, MSG_NOSIGNAL, NULL, 0) = 13
+79908 recvfrom(3, "\1\0\1\0\0\0\10\0\24\0\v\0\0\0\0\316", 131072, 0, NULL, NULL) = 16
+79908 mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe833bb8000
+79908 sendto(3, "\1\0\1\0\0\0\22\0002\0\n\0\0\6node_1\0\0\0\0\0\316", 26, MSG_NOSIGNAL, NULL, 0) = 26
+79908 recvfrom(3, "\1\0\1\0\0\0\23\0002\0\v\6node_1\0\0\0\0\0\0\0\0\316", 131072, 0, NULL, NULL) = 27
+79908 sendto(3, "\1\0\1\0\0\0\23\0<\0\24\0\0\6node_1\0\2\0\0\0\0\316", 27, MSG_NOSIGNAL, NULL, 0) = 27
+79908 recvfrom(3, "\1\0\1\0\0\0$\0<\0\25\37amq.ctag-FueRDW5xyLc"..., 131072, 0, NULL, NULL) = 44
+79908 recvfrom(3, 0x7fe833bd9010, 131072, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+79908 poll([{fd=3, events=POLLIN}], 1, -1 <unfinished ...>
+79888 <... read resumed>"ping 1\n", 1024) = 7
+79888 sendto(3, "\1\0\1\0\0\0\17\0<\0(\0\0\0\6node_1\0\316", 23, MSG_NOSIGNAL|MSG_MORE, NULL, 0) = 23
+79888 sendto(3, "\2\0\1\0\0\0\32\0<\0\0\0\0\0\0\0\0\0\4\220\0\ntext/plain"..., 34, MSG_NOSIGNAL|MSG_MORE, NULL, 0) = 34
+79888 sendto(3, "\3\0\1\0\0\0\4ping\316", 12, MSG_NOSIGNAL, NULL, 0) = 12
+79908 <... poll resumed>)               = 1 ([{fd=3, revents=POLLIN}])
+79888 sendto(3, "\1\0\1\0\0\0\34\0<\0\24\0\0\17controller_resp\0\2\0"..., 36, MSG_NOSIGNAL, NULL, 0 <unfinished ...>
+79908 recvfrom(3,  <unfinished ...>
+79888 <... sendto resumed>)             = 36
+79908 <... recvfrom resumed>"\1\0\1\0\0\0005\0<\0<\37amq.ctag-FueRDW5xyLc"..., 131072, 0, NULL, NULL) = 107
+79888 recvfrom(3, "\1\0\1\0\0\0$\0<\0\25\37amq.ctag-_3iOH707MBx"..., 131072, 0, NULL, NULL) = 44
+79908 sendto(3, "\1\0\1\0\0\0\30\0<\0(\0\0\0\17controller_resp\0\316", 32, MSG_NOSIGNAL|MSG_MORE, NULL, 0 <unfinished ...>
+79888 recvfrom(3, 0x7f2c18de7010, 131072, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+79908 <... sendto resumed>)             = 32
+79888 poll([{fd=3, events=POLLIN}], 1, -1 <unfinished ...>
+79908 sendto(3, "\2\0\1\0\0\0\32\0<\0\0\0\0\0\0\0\0\0\6\220\0\ntext/plain"..., 34, MSG_NOSIGNAL|MSG_MORE, NULL, 0) = 34
+79908 sendto(3, "\3\0\1\0\0\0\6Ok:1:1\316", 14, MSG_NOSIGNAL, NULL, 0 <unfinished ...>
+79888 <... poll resumed>)               = 1 ([{fd=3, revents=POLLIN}])
+79908 <... sendto resumed>)             = 14
+79888 recvfrom(3,  <unfinished ...>
+79908 sendto(3, "\1\0\1\0\0\0\23\0<\0\24\0\0\6node_1\0\2\0\0\0\0\316", 27, MSG_NOSIGNAL, NULL, 0 <unfinished ...>
+79888 <... recvfrom resumed>"\1\0\1\0\0\0>\0<\0<\37amq.ctag-_3iOH707MBx"..., 131072, 0, NULL, NULL) = 118
+79888 write(1, "Ok: 1\n", 6 <unfinished ...>
+79908 <... sendto resumed>)             = 27
+79888 <... write resumed>)              = 6
+79908 recvfrom(3,  <unfinished ...>
+79888 read(0,  <unfinished ...>
+79908 <... recvfrom resumed>"\1\0\1\0\0\0$\0<\0\25\37amq.ctag-Atwe9iToAlW"..., 131072, 0, NULL, NULL) = 44
+79908 recvfrom(3, 0x7fe833bd9010, 131072, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+79908 poll([{fd=3, events=POLLIN}], 1, -1 <unfinished ...>
+79888 <... read resumed>"exec 1 2 50 50 \n", 1024) = 16
+79888 sendto(3, "\1\0\1\0\0\0\17\0<\0(\0\0\0\6node_1\0\316", 23, MSG_NOSIGNAL|MSG_MORE, NULL, 0) = 23
+79888 sendto(3, "\2\0\1\0\0\0\32\0<\0\0\0\0\0\0\0\0\0\16\220\0\ntext/plain"..., 34, MSG_NOSIGNAL|MSG_MORE, NULL, 0) = 34
+79888 sendto(3, "\3\0\1\0\0\0\16exec 2 50 50 \n\316", 22, MSG_NOSIGNAL, NULL, 0) = 22
+79888 sendto(3, "\1\0\1\0\0\0\34\0<\0\24\0\0\17controller_resp\0\2\0"..., 36, MSG_NOSIGNAL, NULL, 0) = 36
+79888 recvfrom(3, 0x7f2c18de7010, 131072, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+79888 poll([{fd=3, events=POLLIN}], 1, -1 <unfinished ...>
+79908 <... poll resumed>)               = 1 ([{fd=3, revents=POLLIN}])
+79908 recvfrom(3,  <unfinished ...>
+79888 <... poll resumed>)               = 1 ([{fd=3, revents=POLLIN}])
+79908 <... recvfrom resumed>"\1\0\1\0\0\0005\0<\0<\37amq.ctag-FueRDW5xyLc"..., 131072, 0, NULL, NULL) = 117
+79888 recvfrom(3, "\1\0\1\0\0\0$\0<\0\25\37amq.ctag-et3AWF881YM"..., 131072, 0, NULL, NULL) = 44
+79908 sendto(3, "\1\0\1\0\0\0\30\0<\0(\0\0\0\17controller_resp\0\316", 32, MSG_NOSIGNAL|MSG_MORE, NULL, 0 <unfinished ...>
+79888 recvfrom(3,  <unfinished ...>
+79908 <... sendto resumed>)             = 32
+79888 <... recvfrom resumed>0x7f2c18de7010, 131072, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+79908 sendto(3, "\2\0\1\0\0\0\32\0<\0\0\0\0\0\0\0\0\0\10\220\0\ntext/plain"..., 34, MSG_NOSIGNAL|MSG_MORE, NULL, 0 <unfinished ...>
+79888 poll([{fd=3, events=POLLIN}], 1, -1 <unfinished ...>
+79908 <... sendto resumed>)             = 34
+79908 sendto(3, "\3\0\1\0\0\0\10Ok:2: 50\316", 16, MSG_NOSIGNAL, NULL, 0) = 16
+79908 sendto(3, "\1\0\1\0\0\0\23\0<\0\24\0\0\6node_1\0\2\0\0\0\0\316", 27, MSG_NOSIGNAL, NULL, 0 <unfinished ...>
+79888 <... poll resumed>)               = 1 ([{fd=3, revents=POLLIN}])
+79908 <... sendto resumed>)             = 27
+79888 recvfrom(3,  <unfinished ...>
+79908 recvfrom(3,  <unfinished ...>
+79888 <... recvfrom resumed>"\1\0\1\0\0\0>\0<\0<\37amq.ctag-_3iOH707MBx"..., 131072, 0, NULL, NULL) = 120
+79908 <... recvfrom resumed>"\1\0\1\0\0\0$\0<\0\25\37amq.ctag-9jJL8AEWFvC"..., 131072, 0, NULL, NULL) = 44
+79888 write(1, "Ok:2: 50\n", 9 <unfinished ...>
+79908 recvfrom(3,  <unfinished ...>
+79888 <... write resumed>)              = 9
+79908 <... recvfrom resumed>0x7fe833bd9010, 131072, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+79888 read(0,  <unfinished ...>
+79908 poll([{fd=3, events=POLLIN}], 1, -1) = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+79888 <... read resumed>0x5608d237f470, 1024) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+79908 --- SIGINT {si_signo=SIGINT, si_code=SI_KERNEL} ---
+79888 --- SIGINT {si_signo=SIGINT, si_code=SI_KERNEL} ---
+79888 +++ killed by SIGINT +++
+79908 +++ killed by SIGINT +++

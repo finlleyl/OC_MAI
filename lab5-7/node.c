@@ -1,60 +1,46 @@
-#include "common.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include "rabbit.h"
 
-int main(int argc, char** argv) {
-    int id = atoi(argv[1]);
-    int parent_id = -1;
-    if(argc > 2) parent_id = atoi(argv[2]);
-    void* ctx = zmq_ctx_new();
-    void* rep = zmq_socket(ctx, ZMQ_REP);
-    char endpoint[256];
-    sprintf(endpoint, "ipc:///tmp/node_%d.ipc", id);
-    zmq_bind(rep, endpoint);
-    void* req = NULL;
-    if(parent_id != -1) {
-        req = zmq_socket(ctx, ZMQ_REQ);
-        char p_endpoint[256];
-        sprintf(p_endpoint, "ipc:///tmp/node_%d.ipc", parent_id);
-        zmq_connect(req, p_endpoint);
-    }
+int main(int argc,char**argv) {
+    if(argc<3)return 1;
+    int id=atoi(argv[1]);
+    const char* q=argv[2];
+    if(rabbit_connect("localhost",5672))return 1;
+    if(rabbit_create_queue(q))return 1;
+    char buf[1024];
     while(1) {
-        zmq_msg_t msg;
-        zmq_msg_init(&msg);
-        int rc = zmq_msg_recv(&msg, rep, 0);
-        if(rc == -1) { zmq_msg_close(&msg); break; }
-        char* data = (char*)zmq_msg_data(&msg);
-        int len = zmq_msg_size(&msg);
-        char* cmd = strndup(data, len);
-        zmq_msg_close(&msg);
-        char* token = strtok(cmd, " ");
-        if(!token) {
-            free(cmd);
-            char err[]="Error";
-            zmq_send(rep, err, strlen(err),0);
+        if(rabbit_recv(q,buf,sizeof(buf))) {
+            sleep(1);
             continue;
         }
-        if(strcmp(token,"exec")==0) {
-            token = strtok(NULL," ");
-            int count = atoi(token);
-            int sum=0;
-            for(int i=0;i<count;i++) {
-                token = strtok(NULL," ");
-                if(!token) {sum=0;break;}
-                sum+=atoi(token);
+        if(strncmp(buf,"exec",4)==0) {
+            char *s = buf + 5; 
+            char *id_str = strtok(s," ");
+            if(!id_str) continue;
+            int exec_id = atoi(id_str);
+
+            char *n_str = strtok(NULL," ");
+            if(!n_str) continue;
+            int n = atoi(n_str);
+
+            long sum = 0;
+            for (int i = 0; i < n; i++) {
+                char *num_str = strtok(NULL," ");
+                if(!num_str) break;
+                sum += atol(num_str);
             }
-            char resp[256];
-            sprintf(resp,"%d",sum);
-            zmq_send(rep, resp, strlen(resp),0);
-        } else if(strcmp(token,"ping")==0) {
-            char resp[]="1";
-            zmq_send(rep,resp,strlen(resp),0);
-        } else {
-            char err[]="Error";
-            zmq_send(rep, err, strlen(err),0);
+
+            char resp[128];
+            sprintf(resp,"Ok:%d: %ld",exec_id,sum);
+            rabbit_send("controller_resp",resp,strlen(resp));
+        } else if(strncmp(buf,"ping",4)==0) {
+            char resp[32];
+            sprintf(resp,"Ok:%d:1",id);
+            rabbit_send("controller_resp",resp,strlen(resp));
         }
-        free(cmd);
     }
-    zmq_close(rep);
-    if(req) zmq_close(req);
-    zmq_ctx_term(ctx);
     return 0;
 }
